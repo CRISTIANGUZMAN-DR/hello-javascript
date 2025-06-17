@@ -71,7 +71,7 @@ console.log(myArray)
 console.log(myArray.shift())
 console.log(myArray)
 
-myArray.unshift("Brais", "mouredev")
+myArray.unshift("Brais", "mouredev") // Agrega al inicio
 console.log(myArray)
 
 // length
@@ -88,17 +88,17 @@ console.log(myArray)
 
 myArray = ["Brais", "Moure", "mouredev", 37, true]
 
-let myNewArray = myArray.slice(1, 3)
+let myNewArray = myArray.slice(1, 3) // busca desde la posicion que le indicamos hasta la posicion del segundo parametro -1
 
 console.log(myArray)
 console.log(myNewArray)
 
 // splice
 
-myArray.splice(1, 3)
+myArray.splice(1, 3) // eliminar: parametro 1: posicion inicial - parametro 2: numero de elementos hacia la derecha
 console.log(myArray)
 
 myArray = ["Brais", "Moure", "mouredev", 37, true]
 
-myArray.splice(1, 2, "Nueva entrada")
+myArray.splice(1, 2, "Nueva entrada") // Eliminar dos elementos desde la posicion 1 y despues agregar "Nueva entrada"
 console.log(myArray)
