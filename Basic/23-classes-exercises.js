@@ -21,4 +21,4 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=18630
 
 // 9. Utiliza los get y set y muestra sus valores
 
-// 10. Sobrescribe un método de una clase que utilice herencia 
+// 10. Sobrescribe un método de una clase que utilice herencia

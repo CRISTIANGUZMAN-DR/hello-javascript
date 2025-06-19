@@ -74,16 +74,78 @@ console.log(textoEnMayuscula2(['cris', 'antonio', 'beto', 'paco']))
 
 // 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
 
-function numeroPrimo(num){
-    if(num)
+function numeroPrimo(num) {
+  if (num < 1) return false
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false
+    }
+  }
+  return true
 }
 
+console.log(numeroPrimo(7))
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+
+function elementosComunes(arr1, arr2) {
+  let arrNew = []
+  arr1.forEach((element) => {
+    if (arr2.includes(element)) {
+      arrNew.push(element)
+    }
+  })
+  return arrNew
+}
+let arr1 = ['CRIS', 'ANTONIO', 'BETO', 'PACO']
+let arr2 = ['JAVIER', 'TIGO', 'CRIS', 'BETO']
+console.log(elementosComunes(arr1, arr2))
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
+let sumarPares = (arr) => {
+  let res = 0
+  for (let v of arr) {
+    if (v % 2 == 0) {
+      res += v
+    }
+  }
+  return res
+}
+
+console.log(sumarPares([1, 2, 3, 4, 9, 8]))
+
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+
+function raizCuadrada(arr) {
+  let newArr = []
+  let raiz
+  arr.forEach((element) => {
+    raiz = Math.sqrt(element)
+    newArr.push(raiz)
+  })
+  return newArr
+}
+
+console.log(raizCuadrada([1, 2, 3, 4, 9, 8]))
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
+function cadenaContrario(cadena) {
+  let palabra = cadena.split(' ') // devuelve un array de palabras
+  palabra.reverse() // devuelve el array de palabras al reves
+  let reversa = palabra.join(' ') // devuelve la cadena de texto unida por el simbolo que le indiquemos
+  return reversa
+}
+
+let cadena = 'Hola devuelve las palabras al reves'
+console.log(cadenaContrario(cadena))
 // 10. Crea una función que calcule el factorial de un número dado
+
+let factorial = (n) => {
+  let fac = 1
+  for (let i = 1; i <= n; i++) {
+    fac *= i
+  }
+  return fac
+}
+console.log(factorial(4))
